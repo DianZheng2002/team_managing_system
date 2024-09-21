@@ -38,4 +38,8 @@ public class Programmer extends Employee{
     public void setEquipment(Equipment equipment) {
         this.equipment = equipment;
     }
+    @Override
+    public String toString() {
+        return getDetails() + "\t程序员\t" + status + "\t\t\t\t\t" + equipment.getDescription();
+    }
 }
