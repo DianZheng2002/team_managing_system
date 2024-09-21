@@ -10,10 +10,8 @@ public class Programmer extends Employee{
     public Programmer() {
     }
 
-    public Programmer(int id, String name, int age, double salary, int memberId, Status status, Equipment equipment) {
+    public Programmer(int id, String name, int age, double salary, Equipment equipment) {
         super(id, name, age, salary);
-        this.memberId = memberId;
-        this.status = status;
         this.equipment = equipment;
     }
 
