@@ -1,18 +1,17 @@
 package domian;
 
-public class Architect extends Employee{
+import service.Status;
 
-    private Equipment equipment;
-    private double bonus;
+public class Architect extends Designer{
+
     private int stock;
 
     public Architect() {
     }
 
-    public Architect(int id, String name, int age, double salary, Equipment equipment, double bonus, int stock) {
-        super(id, name, age, salary);
-        this.equipment = equipment;
-        this.bonus = bonus;
+    public Architect(int id, String name, int age, double salary,
+                     Equipment equipment, double bonus, int stock) {
+        super(id, name, age, salary, equipment, bonus);
         this.stock = stock;
     }
 
@@ -23,20 +22,14 @@ public class Architect extends Employee{
     public void setStock(int stock) {
         this.stock = stock;
     }
-
-    public Equipment getEquipment() {
-        return equipment;
+    public String getDetailsForTeam() {
+        return getMemberDetails() + "\t架构师\t" +
+                getBonus() + "\t" + getStock();
     }
 
-    public void setEquipment(Equipment equipment) {
-        this.equipment = equipment;
-    }
-
-    public double getBonus() {
-        return bonus;
-    }
-
-    public void setBonus(double bonus) {
-        this.bonus = bonus;
+    @Override
+    public String toString() {
+        return getDetails() + "\t架构师\t" + getStatus() + "\t" +
+                getBonus() + "\t" + getStock() + "\t" + getEquipment().getDescription();
     }
 }

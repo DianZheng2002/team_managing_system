@@ -1,4 +1,4 @@
-package com.atguigu.team.view;
+package view;
 
 import java.util.*;
 /**
